@@ -106,3 +106,8 @@ footer { padding: 40px 0; text-align: center; border-top: 1px solid rgba(255,255
     .about-container, .services-container { flex-direction: column; }
     .about-image img { width: 100%; box-shadow: none; }
 }
+
+#form-status{
+margin-top:15px;
+font-size:14px;
+}

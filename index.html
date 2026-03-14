@@ -95,21 +95,21 @@
             <h2 class="section-title">Mes Projets</h2>
             <div class="projects-row">
                 <div class="project-card">
-                    <div class="img-container"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Web Design"></div>
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b" alt="Web Design"></div>
                     <div class="project-content">
                         <h3>Application Météo</h3>
                         <p>Informations météorologiques en temps réel.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="img-container"><img src="https://images.unsplash.com/photo-1541462608141-ad4d05ed08c3?auto=format&fit=crop&w=600&q=80" alt="Graphic Design"></div>
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" alt="Graphic Design"></div>
                     <div class="project-content">
                         <h3>Landing Page</h3>
                         <p>Page d'atterrissage moderne pour entreprise.</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="img-container"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design"></div>
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="UI/UX Design"></div>
                     <div class="project-content">
                         <h3>Design Graphique</h3>
                         <p>Sélection d'affiches et créations pour réseaux sociaux.</p>
@@ -123,17 +123,21 @@
     <section class="contact reveal" id="contact">
         <div class="container">
             <h2>Contactez-moi</h2>
-            <form action="https://formspree.io/f/mnjgzojw" method="POST">
+            <form action="https://formspree.io/f/mnjgzojw" method="POST" id="contact-form">
 
-                <input type="hidden" name="_subject" value="Message depuis mon portfolio">
+                <input type="hidden" name="_subject" value="Nouveau message depuis mon portfolio">
 
+                <input type="text" name="_gotcha" style="display:none">
+                
                 <input type="text" name="name" placeholder="Nom" required>
 
                 <input type="email" name="email" placeholder="Email" required>
 
                 <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit" id="submit-btn">Envoyer</button>
+
+                <p id="form-status"></p>
 
             </form>
         </div>

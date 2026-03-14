@@ -92,3 +92,51 @@ if(bttBtn) {
         window.scrollTo({top: 0, behavior: 'smooth'});
     };
 }
+
+//contact
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+const button = document.getElementById("submit-btn");
+
+form.addEventListener("submit", async function(e) {
+
+    e.preventDefault();
+
+    button.innerText = "Envoi...";
+
+    const data = new FormData(form);
+
+    try {
+
+const response = await fetch(form.action, {
+method: form.method,
+body: data,
+headers: {
+'Accept': 'application/json'
+}
+});
+
+if (response.ok) {
+
+status.innerHTML = "✅ Message envoyé avec succès !";
+status.style.color = "lightgreen";
+
+form.reset();
+button.innerText = "Envoyer";
+
+} else {
+
+status.innerHTML = "❌ Une erreur est survenue.";
+status.style.color = "red";
+
+}
+
+} catch (error) {
+
+status.innerHTML = "❌ Impossible d'envoyer le message.";
+status.style.color = "red";
+
+}
+
+});
