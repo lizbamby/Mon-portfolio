@@ -109,34 +109,50 @@ form.addEventListener("submit", async function(e) {
 
     try {
 
-const response = await fetch(form.action, {
-method: form.method,
-body: data,
-headers: {
-'Accept': 'application/json'
-}
+    const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+    'Accept': 'application/json'
+    }
+    });
+
+    if (response.ok) {
+
+    status.innerHTML = "✅ Message envoyé avec succès !";
+    status.style.color = "lightgreen";
+
+    form.reset();
+    button.innerText = "Envoyer";
+
+    } else {
+
+    status.innerHTML = "❌ Une erreur est survenue.";
+    status.style.color = "red";
+
+    }
+
+    } catch (error) {
+
+    status.innerHTML = "❌ Impossible d'envoyer le message.";
+    status.style.color = "red";
+
+ }
+
 });
 
-if (response.ok) {
+const cursor = document.querySelector(".cursor");
 
-status.innerHTML = "✅ Message envoyé avec succès !";
-status.style.color = "lightgreen";
+document.addEventListener("mousemove", e => {
 
-form.reset();
-button.innerText = "Envoyer";
+cursor.style.left = e.pageX + "px";
+cursor.style.top = e.pageY + "px";
 
-} else {
+});
 
-status.innerHTML = "❌ Une erreur est survenue.";
-status.style.color = "red";
 
-}
+window.addEventListener("load", () => {
 
-} catch (error) {
-
-status.innerHTML = "❌ Impossible d'envoyer le message.";
-status.style.color = "red";
-
-}
+document.getElementById("loader").style.display="none";
 
 });
