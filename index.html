@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BAMBY Vénus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">Babelive</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><i class="fas fa-moon" id="theme-icon"></i></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="./images/profile.jpeg" class="hero-img">
+            <h1>BAMBY Vénus</h1>
+            <p>Je suis <span id="typing-text"></span></p>
+            <span class="scroll">Faire défiler <i class="fas fa-chevron-down"></i></span>
+        </div>
+    </section>
+
+    <section class="about reveal" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="./images/profile.jpeg" alt="Venus Bamby">
+            </div>
+            <div class="about-text">
+                <h4>Découvrez</h4>
+                <h2>Mon parcours</h2>
+                <p>
+                    Je m'appelle Vénus BAMBY. Je suis un développeur web et designer graphique passionné.
+                    J'aime créer des expériences numériques modernes et conviviales.
+                </p>
+                <div class="about-info">
+                    <div>
+                        <p><strong>Nom:</strong> Venus BAMBY</p>
+                        <p><strong>Phone:</strong> +242 069580080</p>
+                        <p><strong>Experience:</strong> 2 ans</p>
+                    </div>
+                    <div>
+                        <p><strong>Age:</strong> 23 ans</p>
+                        <p><strong>Addresse:</strong> Brazzaville, Congo</p>
+                        <p><strong>Specialité:</strong> Développement Web</p>
+                    </div>
+                </div>
+                <button class="btn-cv"><i class="fas fa-download"></i> Télécharger mon CV</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="services reveal" id="services">
+        <div class="container">
+            <h4>Expertise</h4>
+            <h2>Mes Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-code fa-2x"></i>
+                    <h3>Développement Web</h3>
+                    <p>Je crée des sites web responsives et modernes en utilisant HTML, CSS et JavaScript.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush fa-2x"></i>
+                    <h3>Conception graphique</h3>
+                    <p>Je crée des designs visuels professionnels : flyers, publications RS et graphiques promotionnels.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <h3>UI Design</h3>
+                    <p>Je conçois des interfaces utilisateur claires et intuitives pour une meilleure expérience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio reveal" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-row">
+                <div class="project-card">
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Web Design"></div>
+                    <div class="project-content">
+                        <h3>Application Météo</h3>
+                        <p>Informations météorologiques en temps réel.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1541462608141-ad4d05ed08c3?auto=format&fit=crop&w=600&q=80" alt="Graphic Design"></div>
+                    <div class="project-content">
+                        <h3>Landing Page</h3>
+                        <p>Page d'atterrissage moderne pour entreprise.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="img-container"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=600&q=80" alt="UI/UX Design"></div>
+                    <div class="project-content">
+                        <h3>Design Graphique</h3>
+                        <p>Sélection d'affiches et créations pour réseaux sociaux.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="contact reveal" id="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <form action="https://formspree.io/f/mnjgzojw" method="POST" id="contact-form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Votre message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <footer>
+        <p>© 2026 Portfolio - Créé par Vénus Bamby</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
