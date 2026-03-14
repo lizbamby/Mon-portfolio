@@ -123,11 +123,18 @@
     <section class="contact reveal" id="contact">
         <div class="container">
             <h2>Contactez-moi</h2>
-            <form action="https://formspree.io/f/mnjgzojw" method="POST" id="contact-form">
-                <input type="text" placeholder="Nom" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Votre message" rows="5" required></textarea>
+            <form action="https://formspree.io/f/mnjgzojw" method="POST">
+
+                <input type="hidden" name="_subject" value="Message depuis mon portfolio">
+
+                <input type="text" name="name" placeholder="Nom" required>
+
+                <input type="email" name="email" placeholder="Email" required>
+
+                <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+
                 <button type="submit">Envoyer</button>
+
             </form>
         </div>
     </section>
